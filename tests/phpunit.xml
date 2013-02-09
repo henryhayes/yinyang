@@ -1,0 +1,18 @@
+<phpunit bootstrap="Bootstrap.php" colors="true" stopOnFailure="false" syntaxCheck="true" strict="true">
+
+    <testsuite name="YinYang Library">
+        <directory suffix=".test.php">./</directory>
+    </testsuite>
+
+    <filter>
+        <blacklist>
+            <directory suffix=".php">../library/Zend</directory>
+            <directory>/usr/share/php</directory>
+        </blacklist>
+    </filter>
+
+    <logging>
+        <log type="coverage-html" target="/tmp/yinyang-lib/coverage/" charset="UTF-8"
+            yui="true" highlight="false" lowUpperBound="35" highLowerBound="80" />
+    </logging>
+</phpunit>
